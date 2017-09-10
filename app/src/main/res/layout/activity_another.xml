@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AnotherActivity">
+
+    <!--Toolbar-->
+    <include
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/my_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/messageTextView"
+            android:layout_below="@+id/messageTextView"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:maxHeight="250dp"
+            android:src="@drawable/ic_report_problem_black_48dp"/>
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/red"
+            android:text="Warning!"/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingRight="4dp"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:text="12:30 PM : "
+            android:layout_alignBaseline="@+id/messageTextView"
+            android:layout_alignBottom="@+id/messageTextView"
+            android:layout_toStartOf="@+id/messageTextView" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/locationImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_location"/>
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/locationImageView"
+        android:text="@string/locationText"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/locationImageView"
+            android:layout_below="@+id/locationTextView"
+            android:layout_marginTop="4dp"
+            android:text="Location"/>
+
+        <TextView
+            android:id="@+id/remarksTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="32dp"
+            android:text="@string/remarksText" />
+
+        <ImageView
+            android:id="@+id/remarksImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/remarksTextView"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_employee" />
+
+        <TextView
+            android:id="@+id/remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/remarksImageView"
+            android:layout_below="@+id/remarksTextView"
+            android:layout_marginTop="4dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="32dp"
+            android:text="@string/categoryText" />
+
+        <ImageView
+            android:id="@+id/categoryImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/categoryTextView"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_category" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/categoryImageView"
+            android:layout_below="@+id/categoryTextView"
+            android:layout_marginTop="4dp" />
+
+        <ImageView
+            android:id="@+id/severityImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_severity"/>
+
+        <TextView
+            android:id="@+id/severityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/severityImageView"
+            android:text="@string/severityText"/>
+
+        <TextView
+            android:id="@+id/severity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/severityImageView"
+            android:layout_below="@+id/severityTextView"
+            android:layout_marginTop="4dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/okButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:text="OK"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="okButton"/>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:text="Edit?"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

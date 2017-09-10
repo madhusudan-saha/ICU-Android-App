@@ -1,0 +1,236 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditableActivity">
+
+    <!--Toolbar-->
+    <include
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/my_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/imageViewEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/messageTextViewEdit"
+            android:layout_below="@+id/messageTextViewEdit"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:maxHeight="200dp"
+            android:src="@drawable/ic_report_problem_black_48dp"/>
+
+        <TextView
+            android:id="@+id/messageTextViewEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/red"
+            android:text="Warning!"/>
+
+        <TextView
+            android:id="@+id/timeTextViewEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingRight="4dp"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:text="12:30 PM : "
+            android:layout_alignBaseline="@+id/messageTextViewEdit"
+            android:layout_alignBottom="@+id/messageTextViewEdit"
+            android:layout_toStartOf="@+id/messageTextViewEdit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/locationImageViewEdit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_location"/>
+
+        <TextView
+            android:id="@+id/locationTextViewEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/locationImageViewEdit"
+            android:text="@string/locationText"/>
+
+        <TextView
+            android:id="@+id/locationEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/locationImageViewEdit"
+            android:layout_below="@+id/locationTextViewEdit"
+            android:layout_marginTop="6dp" />
+
+        <EditText
+            android:id="@+id/remarksEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/remarksImageViewEdit"
+            android:layout_below="@+id/remarksTextViewEdit"
+            android:layout_marginTop="6dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:text="Text" />
+
+        <ImageButton
+            android:id="@+id/editRemarksEdit"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_edit"
+            android:background="@color/white"
+            android:onClick="remarksEditButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/remarksImageViewEdit"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/remarksTextViewEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:text="@string/remarksText"
+             android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/editRemarksEdit" />
+
+        <ImageView
+            android:id="@+id/remarksImageViewEdit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_employee"
+            android:layout_marginEnd="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/remarksTextViewEdit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/severityImageViewEdit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_severity"/>
+
+        <TextView
+            android:id="@+id/severityTextViewEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/severityImageViewEdit"
+            android:text="@string/severityText"/>
+
+        <Spinner
+            android:id="@+id/severityEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/severityTextViewEdit"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@+id/severityImageViewEdit" />
+
+        <ImageButton
+            android:id="@+id/editCategory"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_edit"
+            android:background="@color/white"
+            android:onClick="categoryEditButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/categoryImageViewEdit" />
+
+        <TextView
+            android:id="@+id/categoryTextViewEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:text="@string/categoryText"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/editCategory" />
+
+        <ImageView
+            android:id="@+id/categoryImageViewEdit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_category"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/categoryTextViewEdit" />
+
+        <Spinner
+            android:id="@+id/categoryEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryTextViewEdit"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:layout_marginTop="6dp"/>
+
+        <ImageButton
+            android:id="@+id/editSeverity"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_edit"
+            android:background="@color/white"
+            android:onClick="severityEditButton"
+            android:layout_marginStart="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/severityTextViewEdit" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/submitFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:text="@string/submit_feedback"/>
+
+</LinearLayout>

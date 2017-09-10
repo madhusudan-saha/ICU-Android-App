@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ICU</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="main_activity">This is our Main Activity</string>
+    <string name="another_activity">This is our Another Activity</string>
+    <string name="locationText">Location</string>
+    <string name="categoryText">Category</string>
+    <string name="severityText">Severity</string>
+    <string name="employeeText">Employee</string>
+    <string name="back_button">back</string>
+    <string name="submit_feedback">Submit</string>
+    <string name="remarksText">Remarks</string>
+</resources>
